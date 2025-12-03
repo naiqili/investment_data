@@ -15,7 +15,7 @@ def dump_all_to_sqlib_source(skip_exists=True):
 
   for symbol, df in stock_df.groupby("symbol"):
     filename = f'{script_path}/qlib_source/{symbol}.csv'
-    print("Dumping to file: ", filename)
+    # print("Dumping to file: ", filename)
     if skip_exists and os.path.isfile(filename):
         continue
     df.to_csv(filename, index=False)
